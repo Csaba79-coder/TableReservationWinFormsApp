@@ -21,7 +21,8 @@ namespace TableReservationWinFormsApp
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             if (textBoxName.Text != "" && numericUpDownPerson.Value > 0 &&
-                dateTimePicker1.Value >= DateTime.Now && numericUpDownHour.Value > 10)
+                dateTimePicker1.Value >= DateTime.Now && 
+                numericUpDownHour.Value >= 10 && numericUpDownHour.Value <= 24)
             {
                 StreamWriter writer = new StreamWriter("reservation.txt", true);
                 writer.WriteLine(textBoxName.Text);
