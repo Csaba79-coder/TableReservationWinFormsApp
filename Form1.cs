@@ -62,7 +62,7 @@ namespace TableReservationWinFormsApp
         private void listBoxGuests_SelectedIndexChanged(object sender, EventArgs e)
         {
             checkBoxRegGuest.Checked = false;
-            if (listBoxGuests.SelectedIndex > 0)
+            if (listBoxGuests.SelectedIndex >= 0)
             {
                 textBoxName.Text = reservations[listBoxGuests.SelectedIndex].NameOfGuest;
                 textBoxGuestNumber.Text = reservations[listBoxGuests.SelectedIndex].NumberOfGuest.ToString();
